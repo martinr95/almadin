@@ -1,0 +1,506 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /*background-color: bisque;*/
+
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
+  background-color: bisque;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav {
+  width: 100vw;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+nav a {
+  cursor: pointer;
+  opacity: 90%;
+  transition: all 0.2s ease-in;
+}
+
+nav a:hover {
+  scale: 1.1;
+  opacity: 100%;
+}
+
+.about-wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-logo-container {
+  width: 300px;
+  height: 100px;
+  background-image: url(Testimages/logo-almadin-small-black.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-bottom: 3rem;
+}
+
+.about-wrapper article {
+  background-color: antiquewhite;
+  margin: 5vh 20vw;
+  border-radius: 20px;
+  padding: 10vh;
+  opacity: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: scroll;
+}
+
+.about-wrapper article h2 {
+  margin: 1rem 0;
+}
+
+.about-wrapper article h3 {
+  margin: 1rem 0;
+}
+
+.about-wrapper article p {
+  text-align: justify;
+}
+
+.card {
+  width: 360px;
+  height: 500px;
+  background-color: antiquewhite;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cards-wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.info-location {
+  position: absolute;
+  top: 180px;
+  right: 60px;
+  width: 360px;
+  height: 500px;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: all 0.5s ease-in;
+  border-radius: 8px;
+  opacity: 0%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.info-location h3 {
+  margin: 20px 20px;
+  font-weight: 800;
+  font-size: 2.5rem;
+}
+
+.info-location p {
+  margin: 20px;
+}
+
+.infobox {
+  position: fixed;
+  top: 180px;
+  left: 60px;
+  width: 360px;
+  height: 500px;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: all 0.5s ease-in;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.infobox article {
+  margin: 20px;
+  height: 120px;
+  overflow: hidden;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.infobox article h5 {
+  font-size: 1.2rem;
+  margin: 10px;
+  text-align: center;
+}
+
+.infobox article p {
+  margin: 10px;
+  text-align: center;
+}
+
+.infobox-logo {
+  width: 300px;
+  height: 100px;
+  margin: 20px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.infobox-image {
+  width: 100%;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.location-container {
+  width: 100%;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.location-icon {
+  scale: 0.7;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  position: absolute;
+}
+
+.location-icon:hover {
+  scale: 0.9;
+}
+
+.logo {
+  transform: translateY(40px);
+  width: 140px;
+}
+
+.map-wrapper {
+  margin: 80px auto;
+  /*height: 500px;
+  width: 1400px;*/
+  height: 500px;
+  width: 1600px;
+  position: relative;
+  z-index: 10;
+}
+
+.map1 {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background-image: url(Testimages/inkscape/map.svg);
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 0px;
+  opacity: 90%;
+  z-index: 11;
+}
+
+.map2 {
+  position: absolute;
+  width: 400px;
+  height: 100px;
+  background-color: brown;
+  top: 0;
+  right: 0;
+  display: none;
+}
+
+.more-aside {
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.more-aside div {
+  display: flex;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 40px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  cursor: pointer;
+  opacity: 70%;
+  transition: all 0.2s ease-in;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.more-aside div:hover {
+  height: 50px;
+  opacity: 90%;
+}
+/*
+.overlay {
+  background-color: bisque;
+  opacity: 40%;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -100;
+}
+*/
+
+.navlist {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.navlist li {
+  list-style: none;
+  color: #333;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+
+.navlist li::after {
+  content: "";
+  height: 1px;
+  background-color: #333;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  transition: 0.2s ease-in-out;
+  width: 0;
+}
+
+.navlist li:hover::after {
+  width: 100%;
+}
+
+.nav-text1,
+.nav-text2 {
+  display: none;
+}
+
+.nav-text1 {
+  position: absolute;
+  transform: translateX(-200px) translateY(100px);
+  font-family: "Great Vibes", cursive;
+  font-size: 1.8rem;
+}
+.nav-text2 {
+  position: absolute;
+  transform: translateX(200px) translateY(100px);
+  font-family: "Great Vibes", cursive;
+  font-size: 1.8rem;
+}
+
+.pin {
+  position: absolute;
+  scale: 1.8;
+  cursor: pointer;
+}
+
+.pin:hover {
+  scale: 2;
+}
+
+.section-wrapper {
+  position: relative;
+  height: 100vh !important;
+  width: 100vw;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  scroll-snap-type: mandatory;
+}
+
+.s1-bgcolor {
+  width: 100vw;
+  height: 140vh;
+  position: absolute;
+  top: -40vh;
+  left: 0;
+  background-color: bisque;
+  z-index: -8;
+  opacity: 90%;
+}
+
+.s1-bgimg {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(Testimages/20231028_105306.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -10;
+}
+
+/*
+.s1-masked {
+  position: absolute;
+  clip-path: circle(90vh at center);
+  background-color: #ffe4c4;
+  opacity: 90%;
+}
+*/
+
+#icon-seceda {
+  top: 35px;
+  left: 510px;
+}
+
+#icon-seiseralm {
+  top: 280px;
+  left: 420px;
+}
+
+#icon-rasciesa {
+  top: -5px;
+  left: 450px;
+}
+
+#icon-colraiser {
+  top: 50px;
+  left: 990px;
+}
+
+#info-ortisei {
+  opacity: 0%;
+  transition: all 0.2s ease-in;
+}
+
+#info-selva {
+  opacity: 0%;
+  transition: all 0.2s ease-in;
+}
+
+#infobox-valeria {
+  opacity: 0%;
+  transition: all 0.2s ease-in;
+}
+
+#infobox-petlin {
+  opacity: 0%;
+  transition: all 0.2s ease-in;
+}
+
+#infobox-castel {
+  opacity: 0%;
+  transition: all 0.2s ease-in;
+}
+
+#infobox-setil {
+  opacity: 0%;
+  transition: all 0.2s ease-in;
+}
+
+#infobox-regina {
+  opacity: 0%;
+  transition: all 0.2s ease-in;
+}
+
+#pin-castel {
+  top: 180px;
+  left: 405px;
+}
+
+#pin-petlin {
+  top: 200px;
+  left: 365px;
+}
+
+#pin-regina {
+  top: 110px;
+  left: 980px;
+}
+
+#pin-setil {
+  top: 250px;
+  left: 450px;
+}
+
+#pin-valeria {
+  top: 45px;
+  left: 450px;
+}
+
+#section1 {
+  background-size: 100%;
+  opacity: 100%;
+}
+#section1::before {
+  content: "";
+  /*background-image: url(Testimages/shutterstock_313599062.jpg);*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.7;
+}
+
+#section3 {
+  background-size: 100%;
+  opacity: 100%;
+}
+
+#section3::before {
+  content: "";
+  background-image: url(Testimages/csm_seceda-val-gardena-09_7ce1d3261c.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.7;
+  z-index: -10;
+}
